@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Playlist List</h1>
+    <ul>
+        {% for playlist in playlists %}
+            <li>
+                {{ playlist.name }}
+                <a href="{% url 'playlist_detail' (link unavailable) %}">View</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

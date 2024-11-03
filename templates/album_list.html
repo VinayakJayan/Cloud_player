@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ album.title }}</h1>
+    <p>Artist: {{ album.artist.name }}</p>
+    <p>Release Date: {{ album.release_date }}</p>
+    <ul>
+        {% for song in album.song_set.all %}
+            <li>
+                {{ song.title }}
+                <a href="{% url 'song_detail' (link unavailable) %}">View</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
